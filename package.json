@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "universal-redux-build",
-    "dev-server": "universal-redux-server",
+    "dev-server": "./bin/server.js",
     "dev": "concurrent --kill-others \"npm run watch-client\" \"npm run dev-server\"",
     "watch-client": "universal-redux-watch"
   },
