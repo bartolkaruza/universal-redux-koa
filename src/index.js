@@ -2,6 +2,7 @@ import koa from 'koa';
 import compress from 'koa-compress';
 import favicon from 'koa-favicon';
 import serve from 'koa-static';
+import logger from 'koa-logger';
 import path from 'path';
 
 /* Minimum config for koa example:
@@ -19,6 +20,8 @@ const config = configure(userConfig);
 const app = koa();
 
 app.use(compress());
+
+app.use(logger());
 
 if (config.server.favicon) {
   app.use(favicon(path.resolve(config.server.favicon)));
