@@ -6,7 +6,7 @@
   "scripts": {
     "build": "universal-redux-build",
     "dev-server": "node ./bin/server.js",
-    "dev": "concurrent --kill-others \"npm run watch-client\" \"npm run dev-server\"",
+    "dev": "concurrently --kill-others \"npm run watch-client\" \"npm run dev-server\"",
     "watch-client": "universal-redux-watch"
   },
   "author": "",
@@ -20,7 +20,7 @@
     "universal-redux": "3.0.1"
   },
   "devDependencies": {
-    "concurrently": "1.0.0",
+    "concurrently": "2.0.0",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
     "react-redux": "4.4.0",
